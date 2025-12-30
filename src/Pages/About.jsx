@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaEye, FaRocket, FaStar, FaUsers, FaGraduationCap, FaAward } from "react-icons/fa";
-import ReviewSlider from "../components/Common/ReviewSlider"
+import ReviewSlider from "../Components/Common/ReviewSlider"
 import Learning1 from "../assets/Images/aboutus.png" 
 import Learning2 from "../assets/Images/aboutus2.png"
 import Learning3 from "../assets/Images/aboutus3.png"

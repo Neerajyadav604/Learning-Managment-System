@@ -1,8 +1,8 @@
 import React from "react";
 
-import ContactDetails from "../components/ContactPage/ContactDetails.jsx";
-import ContactForm from "../components/ContactPage/contactForm.jsx";
-import ReviewSlider from "../components/Common/ReviewSlider.jsx";
+import ContactDetails from "../Components/ContactPage/ContactDetails.jsx";
+import ContactForm from "../Components/ContactPage/contactForm.jsx";
+import ReviewSlider from "../Components/Common/ReviewSlider.jsx";
 
 
 const Contact = () => {

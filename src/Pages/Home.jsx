@@ -18,10 +18,10 @@ import success from "../assets/success.png";
 import s1 from "../assets/s1.png";
 import s2 from "../assets/s2.png";
 import s3 from "../assets/s3.png";
-import Footer from "../components/Footer"
-import ReviewSlider from "../components/Common/ReviewSlider"
- import InstructorSection from "../components/core/HomePage/InstructorSection"
-  import ExploreMore from "../components/core/HomePage/ExploreMore"
+import Footer from "../Components/Footer"
+import ReviewSlider from "../Components/Common/ReviewSlider"
+ import InstructorSection from "../Components/core/HomePage/InstructorSection"
+  import ExploreMore from "../Components/core/HomePage/ExploreMore"
 
 const Home = () => {
   const typedEl = useRef(null);
@@ -399,15 +399,15 @@ export default Home;
 // // Image and Video Import
 // import Banner from "../assets/Images/banner.mp4"
 // // Component Imports
-// import Footer from "../components/Footer"
-// import ReviewSlider from "../components/Common/ReviewSlider"
-// import CTAButton from "../components/core/HomePage/Button"
-// import CodeBlocks from "../components/core/HomePage/CodeBlocks"
-// import ExploreMore from "../components/core/HomePage/ExploreMore"
-// import HighlightText from "../components/core/HomePage/HighlightText"
-// import InstructorSection from "../components/core/HomePage/InstructorSection"
-// import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
-// import TimelineSection from "../components/core/HomePage/TimelineSection"
+// import Footer from "../Components/Footer"
+// import ReviewSlider from "../Components/Common/ReviewSlider"
+// import CTAButton from "../Components/core/HomePage/Button"
+// import CodeBlocks from "../Components/core/HomePage/CodeBlocks"
+// import ExploreMore from "../Components/core/HomePage/ExploreMore"
+// import HighlightText from "../Components/core/HomePage/HighlightText"
+// import InstructorSection from "../Components/core/HomePage/InstructorSection"
+// import LearningLanguageSection from "../Components/core/HomePage/LearningLanguageSection"
+// import TimelineSection from "../Components/core/HomePage/TimelineSection"
 
 // function Home() {
 //   return (
