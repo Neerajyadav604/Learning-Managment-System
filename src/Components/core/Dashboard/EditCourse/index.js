@@ -7,7 +7,7 @@ import {
   fetchCourseDetails,
   getFullDetailsOfCourse,
 } from "../../../../services/operations/courseDetailsAPI"
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
+import { setCourse, setEditCourse } from "../../../../slices/coursesSlice"
 import RenderSteps from "../AddCourses/RenderSteps"
 
 export default function EditCourse() {

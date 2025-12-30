@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 
 import { sidebarLinks } from "../../../data/dashboard-links"
 import { logout } from "../../../services/operations/Authapi"
-import ConfirmationModal from "../../Common/ConfirmationModal"
+import ConfirmationModal from "../../common/ConfirmationModal"
 import SidebarLink from "./SidebarLinks"
 
 export default function Sidebar() {

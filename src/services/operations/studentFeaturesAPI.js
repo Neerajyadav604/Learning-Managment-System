@@ -2,7 +2,7 @@ import { toast } from "react-hot-toast";
 import { studentEndpoints } from "../apis";
 import { apiconnector } from "../Apiconector";
 import rzpLogo from "../../assets/Logo/logo.png"
-import { setPaymentLoading } from "../../slices/courseSlice";
+import { setPaymentLoading } from "../../slices/coursesSlice";
 import { resetCart } from"../../slices/cartslice";
 
 

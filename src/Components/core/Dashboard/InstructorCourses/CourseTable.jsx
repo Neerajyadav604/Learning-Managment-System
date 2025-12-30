@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
-import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
+import { setCourse, setEditCourse } from "../../../../slices/coursesSlice"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState } from "react"
 import { FaCheck } from "react-icons/fa"
@@ -14,7 +14,7 @@ import {
   fetchInstructorCourses,
 } from "../../../../services/operations/courseDetailsAPI"
 import { COURSE_STATUS } from "../../../../utils/constants"
-import ConfirmationModal from "../../../Common/ConfirmationModal"
+import ConfirmationModal from "../../../common/ConfirmationModal"
 
 export default function CoursesTable({ courses, setCourses }) {
   const dispatch = useDispatch()

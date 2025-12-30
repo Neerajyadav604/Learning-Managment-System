@@ -3,7 +3,7 @@ import {combineReducers} from "@reduxjs/toolkit";
 import authReducer from "../slices/authslice"
 import profileReducer from "../slices/profileSlice";
 import cartReducer from "../slices/cartslice"
-import courseReducer from "../slices/courseSlice"
+import courseReducer from "../slices/coursesSlice"
 import viewCourseReducer from "../slices/viewCourseSlice"
 
 const rootReducer  = combineReducers({

@@ -7,7 +7,7 @@ const initialState = {
   totalNoOfLectures: 0,
 }
 
-const viewCourseSlice = createSlice({
+const viewcoursesSlice = createSlice({
   name: "viewCourse",
   initialState,
   reducers: {
@@ -36,6 +36,6 @@ export const {
   setTotalNoOfLectures,
   setCompletedLectures,
   updateCompletedLectures,
-} = viewCourseSlice.actions
+} = viewcoursesSlice.actions
 
-export default viewCourseSlice.reducer
+export default viewcoursesSlice.reducer

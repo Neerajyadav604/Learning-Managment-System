@@ -8,8 +8,8 @@ import {
   createSubSection,
   updateSubSection,
 } from "../../../../../services/operations/courseDetailsAPI"
-import { setCourse } from "../../../../../slices/courseSlice"
-import IconBtn from "../../../../common/IconBtn"
+import { setCourse } from "../../../../../slices/coursesSlice"
+
 import Upload from "../Upload"
 
 export default function SubSectionModal({

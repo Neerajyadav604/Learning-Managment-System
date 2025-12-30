@@ -1,4 +1,4 @@
-import IconBtn from "../../components/core/Dashboard/IconBtn"
+import IconBtn from "../core/Dashboard/IconBtn"
 
 export default function ConfirmationModal({ modalData }) {
   return (
