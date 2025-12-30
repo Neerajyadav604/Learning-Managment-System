@@ -22,10 +22,10 @@ import { ACCOUNT_TYPE } from "./utils/constants";
 import AddCourse from "./Components/core/Dashboard/AddCourses";
 import MyCourses from "./Components/core/Dashboard/MyCourses";
 import Catalog from "./Pages/Catalog";
-import Admindashboard from "./Pages/Admin/AdminDashboard";
+import Admindashboard from "./Components/core/Dashboard/AdminDashboard";
 import ViewCourse from "./Pages/ViewCourse";
 import { useDispatch, useSelector } from "react-redux";
-import CourseDetails from "./Pages/courseDetails"
+import CourseDetails from "./Pages/courseDetails";
 import VideoDetails from "./Components/core/Viewcourse/VideoDetails";
 import Editcourse from "./Components/core/Dashboard/EditCourse"
 import ExploreCourses from './Pages/ExploreCourses';
