@@ -62,7 +62,7 @@ const VideoDetails = () => {
     )
     const lastSectionIndex = courseSectionData.length - 1
     const lastSubIndex =
-      courseSectionData[lastSectionIndex]?.Subsection.length - 1
+      courseSectionData[lastSectionIndex]?.subSection.length - 1
     return sectionIndex === lastSectionIndex && subIndex === lastSubIndex
   }
 
