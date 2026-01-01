@@ -5,6 +5,7 @@ import RenderTotalAmount from "./RenderTotalAmount"
 
 export default function Cart() {
   const { total, totalItems } = useSelector((state) => state.cart)
+  console.log(total)
 
   return (
     <div className="mt-10 min-h-screen p-6 md:p-8">
