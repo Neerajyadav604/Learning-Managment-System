@@ -27,7 +27,7 @@ export const contactusEndpoint = {
 }
 
 export const ratingsEndpoints = {
-  REVIEWS_DETAILS_API: `${`${BASE_URL}` }/rating/all`,
+  REVIEWS_DETAILS_API: `${`${BASE_URL}` }/createRating`,
 }
 
 export const settingsEndpoints = {
