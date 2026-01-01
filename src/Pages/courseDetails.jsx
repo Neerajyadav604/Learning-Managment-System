@@ -112,7 +112,7 @@ console.log("Response Course:",response.course)
       btn2Handler: () => setConfirmationModal(null),
     })
   }
-
+/** hii */
   if (paymentLoading) {
     return (
       <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center bg-gradient-to-br from-richblack-900 via-richblack-800 to-richblack-900">
