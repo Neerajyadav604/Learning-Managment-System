@@ -47,7 +47,7 @@ const VideoDetails = () => {
     const sectionIndex = courseSectionData.findIndex(
       (s) => s._id === sectionId
     )
-    const subIndex = courseSectionData[sectionIndex]?.Subsection.findIndex(
+    const subIndex = courseSectionData[sectionIndex]?.subSection.findIndex(
       (v) => v._id === subSectionId
     )
     return sectionIndex === 0 && subIndex === 0
