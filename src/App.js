@@ -25,7 +25,7 @@ import Catalog from "./Pages/Catalog";
 import Admindashboard from "./Pages/Admin/AdminDashboard";
 import ViewCourse from "./Pages/ViewCourse";
 import { useDispatch, useSelector } from "react-redux";
-import CourseDetails from "./Pages/courseDetails";
+import CourseDetails from "./Pages/CourseDetails";
 import VideoDetails from "./Components/core/ViewCourse/videoDetails";
 import Editcourse from "./Components/core/Dashboard/EditCourse"
 import ExploreCourses from './Pages/ExploreCourses';
