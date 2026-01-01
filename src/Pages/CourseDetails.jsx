@@ -75,11 +75,12 @@ function CourseDetails() {
       </div>
     )
   }
+  console.log("Response in CourseDetails:", response)
 
   if (!response.success) {
     return <Error />
   }
-
+console.log("Response Course:",response.course)
   const {
     _id: course_id,
     courseName,
@@ -92,7 +93,10 @@ function CourseDetails() {
     instructor,
     studentsEnrolled,
     createdAt,
-  } = response.course
+  } = response.data.courseDetails
+
+  console.log("################",response.data.courseDetails)
+  console.log("Instructor Info:", response.data.courseDetails.instructor.firstName,response.data.courseDetails.instructor.lastName)
 
   const handleBuyCourse = () => {
     if (token) {
@@ -163,10 +167,10 @@ function CourseDetails() {
                     <div className="flex items-center gap-2 bg-richblack-700/50 px-4 py-2 rounded-lg border border-richblack-600">
                       <span className="text-yellow-50 font-bold text-lg">{avgReviewCount}</span>
                       <RatingStars Review_Count={avgReviewCount} Star_Size={20} />
-                      <span className="text-richblack-200">({ratingAndReviews.length})</span>
+                      <span className="text-richblack-200">({ratingAndReviews?.length})</span>
                     </div>
                     <div className="flex items-center gap-2 bg-richblack-700/50 px-4 py-2 rounded-lg border border-richblack-600">
-                      <span className="text-richblack-200">{studentsEnrolled.length} students</span>
+                      <span className="text-richblack-200">{studentsEnrolled?.length} students</span>
                     </div>
                   </div>
 
@@ -204,7 +208,7 @@ function CourseDetails() {
               <div className="lg:col-span-1 hidden lg:block">
                 <div className="sticky top-24">
                   <CourseDetailsCard
-                    course={response?.course}
+                    course={response?.data}
                     setConfirmationModal={setConfirmationModal}
                     handleBuyCourse={handleBuyCourse}
                   />
@@ -265,7 +269,7 @@ function CourseDetails() {
                     <div className="flex flex-wrap justify-between gap-4 items-center">
                       <div className="flex flex-wrap gap-4 text-richblack-200">
                         <span className="flex items-center gap-2 bg-richblack-700 px-4 py-2 rounded-lg">
-                          📚 {courseContent.length} sections
+                          📚 {courseContent?.length} sections
                         </span>
                         <span className="flex items-center gap-2 bg-richblack-700 px-4 py-2 rounded-lg">
                           🎥 {totalNoOfLectures} lectures
@@ -305,9 +309,9 @@ function CourseDetails() {
                     <div className="relative">
                       <img
                         src={
-                          instructor.image
-                            ? instructor.image
-                            : `https://api.dicebear.com/5.x/initials/svg?seed=${instructor.firstName} ${instructor.lastName}`
+                          instructor?.image
+                            ? instructor?.image
+                            : `https://api.dicebear.com/5.x/initials/svg?seed=${instructor?.firstName} ${instructor?.lastName}`
                         }
                         alt="Instructor"
                         className="h-20 w-20 rounded-full object-cover border-4 border-blue-500 shadow-lg"
@@ -315,7 +319,7 @@ function CourseDetails() {
                       <div className="absolute -bottom-1 -right-1 bg-green-500 w-6 h-6 rounded-full border-4 border-richblack-800"></div>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-black">{`${instructor.firstName} ${instructor.lastName}`}</p>
+                      <p className="text-2xl font-bold text-black">{`${instructor?.firstName} ${instructor?.lastName}`}</p>
                       <p className="text-richblack-300">Course Instructor</p>
                     </div>
                   </div>

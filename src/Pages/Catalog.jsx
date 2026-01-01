@@ -24,10 +24,15 @@ const Catalog = () => {
             const res = await apiconnector("GET", categories.CATEGORIES_API);
             console.log('RES = ',res)
            
-
+console.log(res?.data?.data?.filter(
+  (ct) =>
+    ct?.name === catalogName)[0]._id)
+  
          const matchedCategory = res?.data?.data?.filter(
   (ct) =>
     ct?.name === catalogName)[0]._id;
+
+
 
 
 const category_id = matchedCategory;

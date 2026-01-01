@@ -110,7 +110,7 @@ console.log(response.data.user);
       const data2 = dispatch(setUser({ ...response.data.user, image: userImage }))
       console.log(data2);
       
-      localStorage.setItem("token", JSON.stringify(response.data.token))
+      localStorage.setItem("token",response.data.token)
       localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard/my-profile")
     } catch (error) {

@@ -15,7 +15,9 @@ const {
 export function updateDisplayPicture(token, formData) {
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
+    
     try {
+      
       const response = await apiconnector(
         "PUT",
         UPDATE_DISPLAY_PICTURE_API,
@@ -24,6 +26,7 @@ export function updateDisplayPicture(token, formData) {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
         }
+        
       )
       console.log(
         "UPDATE_DISPLAY_PICTURE_API API RESPONSE............",
@@ -56,6 +59,8 @@ export function updateProfile(token, formData) {
       if (!response.data.success) {
         throw new Error(response.data.message)
       }
+
+      console.log("Updated user details: ", response.data.updatedUserDetails)
       const userImage = response.data.updatedUserDetails.image
         ? response.data.updatedUserDetails.image
         : `https://api.dicebear.com/5.x/initials/svg?seed=${response.data.updatedUserDetails.firstName} ${response.data.updatedUserDetails.lastName}`

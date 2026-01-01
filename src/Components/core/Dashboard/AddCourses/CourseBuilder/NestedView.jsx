@@ -55,6 +55,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
         id="nestedViewContainer"
       >
         {course?.courseContent?.map((section, index) => (
+          console.log(section),
           <details 
             key={section._id} 
             open
@@ -70,7 +71,8 @@ export default function NestedView({ handleChangeEditSectionName }) {
                     {section.sectionName}
                   </p>
                   <span className="text-xs text-richblack-400 mt-0.5">
-                    {section.Subsection.length} {section.Subsection.length === 1 ? 'lecture' : 'lectures'}
+                    {section.subSection.length} {section.subSection.length === 1 ? 'lecture' : 'lectures'}
+                   
                   </span>
                 </div>
               </div>
@@ -108,7 +110,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
             </summary>
             
             <div className="px-5 pb-4 pt-2 space-y-2">
-              {section.Subsection.map((data, subIndex) => (
+              {section.subSection.map((data, subIndex) => (
                 <div
                   key={data?._id}
                   onClick={() => setViewSubsection(data)}
@@ -165,7 +167,7 @@ export default function NestedView({ handleChangeEditSectionName }) {
                 </div>
               ))}
               
-              {section.Subsection.length === 0 && (
+              {section.subSection.length === 0 && (
                 <div className="flex items-center justify-center py-8 text-richblack-400">
                   <p className="text-sm">No lectures added yet</p>
                 </div>
