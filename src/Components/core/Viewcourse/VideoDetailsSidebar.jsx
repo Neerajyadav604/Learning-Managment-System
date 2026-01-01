@@ -27,9 +27,9 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
       )
       const currentSubSectionIndx = courseSectionData?.[
         currentSectionIndx
-      ]?.Subsection.findIndex((data) => data._id === subSectionId)
+      ]?.subSection.findIndex((data) => data._id === subSectionId)
       const activeSubSectionId =
-        courseSectionData[currentSectionIndx]?.Subsection?.[
+        courseSectionData[currentSectionIndx]?.subSection?.[
           currentSubSectionIndx
         ]?._id
       setActiveStatus(courseSectionData?.[currentSectionIndx]?._id)
@@ -126,7 +126,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
             {/* Subsections */}
             {activeStatus === course?._id && (
               <div className="bg-slate-900/30">
-                {course.Subsection.map((topic, i) => {
+                {course.subSection.map((topic, i) => {
                   const isActive = videoBarActive === topic._id
                   const isCompleted = completedLectures.includes(topic?._id)
                   
